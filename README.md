@@ -57,4 +57,4 @@ they work together.
     The build_routine class is used orchestrate the configure, make, make install process for a source.  
 #####Package Config
     `package_config.cpp` `package_config.h`  
-    The package_config_file class is used to parse the ubuild for a package.  
+    The package_config class is used to parse the ubuild for a package.  
