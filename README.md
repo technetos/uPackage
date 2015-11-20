@@ -20,7 +20,8 @@ __**To install a package that is not prepackaged you have to write a small progr
 >   That sucks!  It take alot of time to write a package, time that could be spent using
 the software your trying so hard to install.  
 
-#The Solution
+__*uPackage solves these problems and more*__
+#Data Design
 
 uPackage defines the following directories underneath a main root directory:
 
