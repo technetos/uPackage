@@ -1,4 +1,4 @@
-#uPackage
+#uPackage - Pronounced ("ooopackage")
 ---------
 
 ### uPackage is a general purpose package manager for linux.  
