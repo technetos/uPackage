@@ -17,7 +17,7 @@ then you have to write one yourself.
 
 __**To install a package that is not prepackaged you have to write a small program.**__
 
->   That sucks!  It take alot of time to write a package, time that could be spent using
+>   That sucks!  It takes alot of time to write a package, time that could be spent using
 the software your trying so hard to install.  
 
 __*uPackage solves these problems and more*__
