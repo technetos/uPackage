@@ -48,16 +48,17 @@ and the filename is the name of the package + the version.
 >   uPackage is broken up into multiple C++ classes.  Each class uses its own
 algorithm during execution.  
 
-#####Config : Deps Global
-    `config.h` `config.cpp`  
+#####config
+    `config.h` `config.cpp`
+    Depends on global
     The config class is used to do initial setup and processing of global (system wide) options.  
-#####Global
+#####global
     `global.h` `global.cpp`
     The global functions are basic convience functions to make things easier
-#####Build Routine
+#####build routine
     `build_routine.h` `build_routine.cpp`  
     The build_routine class is used orchestrate the configure, make, make install process for a source.  
-#####Package Config
+#####package config
     `package_config.cpp` `package_config.h`  
     The package_config class is used to parse the ubuild for a package.  
 
