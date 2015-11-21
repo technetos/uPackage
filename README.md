@@ -46,8 +46,7 @@ and the filename is the name of the package + the version.
 
 #Algorithm
 >   uPackage is broken up into multiple C++ classes.  Each class uses its own
-algorithm during execution.  I will cover each one by one and then explain how
-they work together.  
+algorithm during execution.  
 
 #####Config
     `config.h` `config.cpp`  
@@ -61,5 +60,4 @@ they work together.
 #####Package Config
     `package_config.cpp` `package_config.h`  
     The package_config class is used to parse the ubuild for a package.  
-
 
