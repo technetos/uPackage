@@ -52,6 +52,10 @@ void Config::init()
      * |All of the directories in upackage are under upackage_root|
      * +----------------------------------------------------------+
      */
+    /* +-------------------+
+     * |These are defaults |
+     * +-------------------+
+     */
     ubuild_path = upackage_root + "ubuild/";
     tarball_path = upackage_root + "tarballs/";
     source_path = upackage_root + "sources/";
