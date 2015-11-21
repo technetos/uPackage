@@ -52,9 +52,14 @@ they work together.
 #####Config
     `config.h` `config.cpp`  
     The config class is used to do initial setup and processing of global (system wide) options.  
+#####Global
+    `global.h` `global.cpp`
+    The global functions are basic convience functions to make things easier
 #####Build Routine
     `build_routine.h` `build_routine.cpp`  
     The build_routine class is used orchestrate the configure, make, make install process for a source.  
 #####Package Config
     `package_config.cpp` `package_config.h`  
     The package_config class is used to parse the ubuild for a package.  
+
+
