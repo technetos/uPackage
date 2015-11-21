@@ -23,7 +23,7 @@ the software your trying so hard to install.
 __*uPackage solves these problems and more*__
 #Data Design
 
-uPackage defines the following directories underneath a main root directory:
+>   uPackage defines the following directories underneath a main root directory:
 
 #####ubuild/
 >   This directory is for the ubuild files that dictate how a package should
