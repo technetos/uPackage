@@ -51,6 +51,8 @@ algorithm during execution.
 #####Config
     `config.h` `config.cpp`  
     The config class is used to do initial setup and processing of global (system wide) options.  
+######Depends
+    * Global
 #####Global
     `global.h` `global.cpp`
     The global functions are basic convience functions to make things easier
