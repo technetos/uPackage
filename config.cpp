@@ -16,7 +16,7 @@ std::string Config::cxxflags;
 
 void Config::init()
 {
-    upackage_root = "/var/upackage";
+    upackage_root = "/var/upackage/";
     
     /* +--------------------------------------------+
      * |Here we are checking to see if the user has |
@@ -43,7 +43,7 @@ void Config::init()
              * |The environment variable must not be correctly|
              * |terminated, lets fix that and move on.        |
              * +----------------------------------------------+
-             */t
+             */
             upackage_root = env + "/";
         }
     }
@@ -68,7 +68,7 @@ void Config::init()
      * |Now we read in the global config file for upackage|
      * +--------------------------------------------------+
      */
-    std::vector<std::string> file = read("/etc/upackage.conf");
+    std::vector<std::string> file = read("upackage.conf");
 
     /* +----------------------------------------------------+
      * |If the file size is <= 0 then the file must be empty|
@@ -95,6 +95,12 @@ void Config::init()
     
     for(int i = 0; i < file.size(); i++)
     {
+        /* +----------------------------+
+         * |Do nothing with line[0] == # |
+         * +----------------------------+
+         */
+        file[i] = file[i].substr(0, file[i].find_first_of("#"));
+
         /* +---------------------+
          * |Locate all of the ':'|
          * +---------------------+
