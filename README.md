@@ -48,11 +48,9 @@ and the filename is the name of the package + the version.
 >   uPackage is broken up into multiple C++ classes.  Each class uses its own
 algorithm during execution.  
 
-#####Config
+#####Config : Deps Global
     `config.h` `config.cpp`  
     The config class is used to do initial setup and processing of global (system wide) options.  
-######Depends
-    * Global
 #####Global
     `global.h` `global.cpp`
     The global functions are basic convience functions to make things easier
