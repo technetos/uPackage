@@ -33,9 +33,6 @@ be compiled.
 >   This directory is for the archived sources for packages that are going to
 be built.  
 
-#####sources/
->   This directory is where the sources from tarballs/ get extracted to.  
-
 #####packages/
 >   This is where the package tracking files go.  Each file contains the full
 path of every file installed by a package.  Each package has one tracking file
