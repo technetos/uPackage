@@ -9,14 +9,13 @@
 std::string Config::upackage_root;
 std::string Config::ubuild_path;
 std::string Config::tarball_path;
-std::string Config::source_path;
 std::string Config::tracker_path;
 std::string Config::cflags;
 std::string Config::cxxflags;
 
 void Config::init()
 {
-    upackage_root = "/var/upackage/";
+    upackage_root = "upackage/";
     
     /* +--------------------------------------------+
      * |Here we are checking to see if the user has |
@@ -58,7 +57,6 @@ void Config::init()
      */
     ubuild_path = upackage_root + "ubuild/";
     tarball_path = upackage_root + "tarballs/";
-    source_path = upackage_root + "sources/";
     tracker_path = upackage_root + "packages/";
 
     cflags = "";

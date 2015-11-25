@@ -22,12 +22,6 @@ class Config
          */
         static std::string tarball_path;
         
-        /* +-----------------------------------------------------------------+
-         * |The directory that the sources in 'tarball_path' are extracted to|
-         * +-----------------------------------------------------------------+
-         */
-        static std::string source_path;
-        
         /* +-------------------------------------------------------+
          * |The directory that we use for storing the tracker files|
          * +-------------------------------------------------------+
@@ -56,10 +50,6 @@ class Config
         static std::string get_tarball_path()
         {
             return tarball_path;
-        }
-        static std::string get_source_path()
-        {
-            return source_path;
         }
         static std::string get_tracker_path()
         {
