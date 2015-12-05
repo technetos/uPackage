@@ -10,8 +10,9 @@ std::string Config::upackage_root;
 std::string Config::ubuild_path;
 std::string Config::tarball_path;
 std::string Config::tracker_path;
-std::string Config::cflags;
-std::string Config::cxxflags;
+std::string Config::prefix;
+std::string Config::manpath;
+std::string Config::docpath;
 
 void Config::init()
 {
@@ -51,16 +52,18 @@ void Config::init()
      * |All of the directories in upackage are under upackage_root|
      * +----------------------------------------------------------+
      */
-    /* +-------------------+
-     * |These are defaults |
-     * +-------------------+
+ 
+    /* +------------------+
+     * |These are defaults|
+     * +------------------+
      */
     ubuild_path = upackage_root + "ubuild/";
     tarball_path = upackage_root + "tarballs/";
     tracker_path = upackage_root + "packages/";
 
-    cflags = "";
-    cxxflags = "";
+    prefix = "";
+    manpath = "";
+    docpath = "";
 
     /* +--------------------------------------------------+
      * |Now we read in the global config file for upackage|
@@ -94,7 +97,7 @@ void Config::init()
     for(int i = 0; i < file.size(); i++)
     {
         /* +----------------------------+
-         * |Do nothing with line[0] == # |
+         * |Do nothing with line[0] == #|
          * +----------------------------+
          */
         file[i] = file[i].substr(0, file[i].find_first_of("#"));
@@ -149,16 +152,23 @@ void Config::init()
                 value = value + "\n" + file[j];
             }
         }
-        if(!strcmp(key.c_str(), "CFLAGS")
-                || !strcmp(key.c_str(), "cflags"))
+        if(!strcmp(key.c_str(), "PREFIX")
+                || !strcmp(key.c_str(), "prefix"))
         {
-            cflags = value;
+            prefix = value;
         }
-        if(!strcmp(key.c_str(), "CXXFLAGS")
-                || !strcmp(key.c_str(), "cxxflags"))
+        if(!strcmp(key.c_str(), "MAN")
+                || !strcmp(key.c_str(), "man"))
         {
-            cxxflags = value;
+            manpath = value;
         }
+        if(!strcmp(key.c_str(), "DOC")
+                || !strcmp(key.c_str(), "doc"))
+        {
+            docpath = value;
+        }
+
+        
     }
 }
 
