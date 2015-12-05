@@ -8,44 +8,28 @@
 class Config
 {
     private:
-        // +-------------------------------------+
-        // |The top level directory for upackage 
-        // +-------------------------------------+
+        // The top level directory for upackage 
         static std::string upackage_root;
         
-        // +-------------------------------------------+
-        // |The directory for the build files (ubuilds)
-        // +-------------------------------------------+
+        // The directory for the build files (ubuilds)
         static std::string ubuild_path;
 
-        // +------------------------------------------------+
-        // |The directory that we put our source tarballs in
-        // +------------------------------------------------+
+        // The directory that we put our source tarballs in
         static std::string tarball_path;
         
-        // +-------------------------------------------------------+
-        // |The directory that we use for storing the tracker files
-        // +-------------------------------------------------------+
+        // The directory that we use for storing the tracker files
         static std::string tracker_path;
 
-        // +------------------------------+
-        // |The prefix passed to configure
-        // +------------------------------+
+        // The prefix passed to configure
         static std::string prefix;
 
-        // +--------------------------------+
-        // |The system wide default man path
-        // +--------------------------------+
+        // The system wide default man path
         static std::string manpath;
 
-        // +------------------------+
-        // |The system wide doc path
-        // +------------------------+
+        // The system wide doc path
         static std::string docpath;
     public:
-        // +--------------+
-        // |Public Getters
-        // +--------------+
+        // Public Getters
         static std::string get_upackage_root()
         {
             return upackage_root;
@@ -89,13 +73,7 @@ class Config
 
             return ret;
         }
-
-
-
-
-        // +--------------------------------------------------------------+
-        // |The init function is used to setup the inital config variables
-        // +--------------------------------------------------------------+
+        // The init function is used to setup the inital config variables
         static void init();
 };
 #endif
