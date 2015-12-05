@@ -9,10 +9,7 @@ Package_Config read_package(std::string packagefile)
 {
     Package_Config package;
 
-    /* +----------------+
-     * |Read in a ubuild|
-     * +----------------+
-     */
+    // Read in a ubuild
     std::vector<std::string> file = read(packagefile);
     
     if(file.size() <= 0)
@@ -88,15 +85,6 @@ Package_Config read_package(std::string packagefile)
         {
             package.set_postinstall(value);
         }
-/*        if(!strcmp(key.c_str(), "dotconf"))
-        {
-            package.set_dot_conf_data(value);
-        }
-        if(!strcmp(key.c_str(), "dotconf_dest"))
-        {
-            package.set_dot_conf_dest(value);
-        }
-*/        
     }
     return package;
 }

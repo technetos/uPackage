@@ -6,76 +6,40 @@
 class Package_Config
 {
     private:
-        /* +-----------------------+
-         * |The name of the package|
-         * +-----------------------+
-         */
+        // The name of the package
         std::string name;
 
-        /* +--------------------------+
-         * |The version of the package|
-         * +--------------------------+
-         */
+        // The version of the package
         std::string version;
 
-        /* +-----------------------------------+
-         * |The things to be run before install|
-         * +-----------------------------------+
-         */
+        // The things to be run before install
         std::string preinstall;
 
-        /* +--------------------------------------------+
-         * |This string is for storing the dot_conf data|
-         * +--------------------------------------------+
-         */
+        // This string is for storing the dot_conf data
         std::string dot_conf_data;
 
-        /* +---------------------------------------------------------------+
-         * |This string is for storing the destination of the dot_conf file|
-         * +---------------------------------------------------------------+
-         */
+        // This string is for storing the destination of the dot_conf file
         std::string dot_conf_dest;
 
-        /* +----------------------------------+
-         * |The things to be run after install|
-         * +----------------------------------+
-         */
+        // The things to be run after install
         std::string postinstall;
 
-        /* +-------------------------+
-         * |The patches to be applied|
-         * +-------------------------+
-         */
+        // The patches to be applied
         std::vector<std::string> patches;
 
-        /* +---------------------+
-         * |The configure options|
-         * +---------------------+
-         */
+        // The configure options
         std::string configure;
 
-        /* +----------------+
-         * |The make options|
-         * +----------------+
-         */
+        // The make options
         std::string make;
 
-        /* +------------------------+
-         * |The make install options|
-         * +------------------------+
-         */
+        // The make install options
         std::string make_install;
 
-        /* +-------------------------------+
-         * |The name of the archived source|
-         * +-------------------------------+
-         */
+        // The name of the archived source
         std::string archive_name;
 
-        /* +---------------------------------+
-         * |The name of the unarchived source|
-         * +---------------------------------+
-         */
+        // The name of the unarchived source
         std::string source;
     public:
         Package_Config(){};
