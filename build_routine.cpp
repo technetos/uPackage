@@ -20,10 +20,7 @@ bool run(Package_Config package)
     
     std::string tarfile = package.get_archive_name();
 
-    /* +-------------------------------------------------------------------+
-     * |The directory we use for package compilation is /tmp/uPackage-build|
-     * +-------------------------------------------------------------------+
-     */
+    // The directory we use for package compilation is /tmp/uPackage-build
     std::string build_root = "/usr/data/code/uPackage/temp_dir/package-" + package.get_name() + "-" + package.get_version();
     
     system(("rm -r " + build_root).c_str());
@@ -69,11 +66,12 @@ bool run(Package_Config package)
                         
                         // x86_64-slackware-linux
                         + " " + "--build=" + Config::get_arch() + "-slackware-linux" \
+                        
                         + " " + package.get_configure()
                         
                         ).c_str()) != 0)
         {
-            err("configure " + package.get_configure(), 1);
+            err("configure failed" + package.get_configure(), 1);
         }
     }
     else
@@ -94,7 +92,7 @@ bool run(Package_Config package)
 
                         ).c_str()) != 0)
         {
-            err("configure", 1);
+            err("configure failed", 1);
         }
     }
 
