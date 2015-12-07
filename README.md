@@ -56,10 +56,12 @@ algorithm during execution.
     `global.h` `global.cpp`
     The global functions are basic convience functions to make things easier
 #####build routine
-    `build_routine.h` `build_routine.cpp`  
+    `build_routine.h` `build_routine.cpp`
+    Depends on global, config, package_config
     The build_routine function is used orchestrate the configure, make, make install process for a source.  
 #####package config
-    `package_config.cpp` `package_config.h`  
+    `package_config.cpp` `package_config.h` 
+    Depends on global, config 
     The package_config class is used to parse the ubuild for a package.  
 
 # It doesnt work yet....
