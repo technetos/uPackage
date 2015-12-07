@@ -54,8 +54,10 @@ algorithm during execution.
     The global functions are basic convience functions to make things easier
 #####build routine
     `build_routine.h` `build_routine.cpp`  
-    The build_routine class is used orchestrate the configure, make, make install process for a source.  
+    The build_routine function is used orchestrate the configure, make, make install process for a source.  
 #####package config
     `package_config.cpp` `package_config.h`  
-    The package_config functions are used to parse the ubuild for a package.  
+    The package_config class is used to parse the ubuild for a package.  
 
+# It doesnt work yet....
+>   uPackage will compile a package given a ubuild and a source archive, but thats all so far.  
