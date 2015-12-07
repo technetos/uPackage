@@ -2,8 +2,8 @@
 #define _CONFIG_H
 
 #include<sys/utsname.h>
-#include"global.h"
 
+#include"global.h"
 
 class Config
 {
@@ -20,14 +20,18 @@ class Config
         // The directory that we use for storing the tracker files
         static std::string tracker_path;
 
+        // The directory the we put scripts in
+        static std::string script_path;
+
         // The prefix passed to configure
         static std::string prefix;
 
         // The system wide default man path
-        static std::string manpath;
+        static std::string man_path;
 
         // The system wide doc path
-        static std::string docpath;
+        static std::string doc_path;
+
     public:
         // Public Getters
         static std::string get_upackage_root()
@@ -46,17 +50,21 @@ class Config
         {
             return tracker_path;
         }
+        static std::string get_script_path()
+        {
+            return script_path;
+        }
         static std::string get_prefix()
         {
             return prefix;
         }
-        static std::string get_manpath()
+        static std::string get_man_path()
         {
-            return manpath;
+            return man_path;
         }
-        static std::string get_docpath()
+        static std::string get_doc_path()
         {
-            return docpath;
+            return doc_path;
         }
         static std::string get_arch()
         {

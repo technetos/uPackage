@@ -38,10 +38,7 @@ std::vector<std::string> read(const std::string src)
 bool write(const std::string data, const std::string dest, bool overwrite)
 {
     std::ofstream text;
-    /* +-------------------------------------+
-     * | check if we overwite the file or not|
-     * +-------------------------------------+
-     */
+    // check if we overwite the file or not
     if(overwrite)
     {
         text.open(dest.c_str(), std::ios::trunc);
@@ -76,3 +73,4 @@ void err(std::string msg, int level)
         exit(1);
     }
 }
+

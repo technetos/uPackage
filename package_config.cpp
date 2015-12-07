@@ -77,14 +77,6 @@ Package_Config read_package(std::string packagefile)
         {
             package.set_source(value);
         }
-        if(!strcmp(key.c_str(), "preinstall"))
-        {
-            package.set_preinstall(value);
-        }
-        if(!strcmp(key.c_str(), "postinstall"))
-        {
-            package.set_postinstall(value);
-        }
     }
     return package;
 }

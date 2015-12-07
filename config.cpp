@@ -10,13 +10,14 @@ std::string Config::upackage_root;
 std::string Config::ubuild_path;
 std::string Config::tarball_path;
 std::string Config::tracker_path;
+std::string Config::script_path;
 std::string Config::prefix;
-std::string Config::manpath;
-std::string Config::docpath;
+std::string Config::man_path;
+std::string Config::doc_path;
 
 void Config::init()
 {
-    upackage_root = "upackage/";
+    upackage_root = "/opt/upackage/";
     
      // Here we are checking to see if the user has
      // set the UPACKAGE_ROOT environment variable
@@ -45,13 +46,14 @@ void Config::init()
     ubuild_path = upackage_root + "ubuild/";
     tarball_path = upackage_root + "tarballs/";
     tracker_path = upackage_root + "packages/";
+    script_path = upackage_root + "scripts/";
 
     prefix = "";
-    manpath = "";
-    docpath = "";
+    man_path = "";
+    doc_path = "";
 
     // Now we read in the global config file for upackage
-    std::vector<std::string> file = read("upackage.conf");
+    std::vector<std::string> file = read("/etc/upackage.conf");
 
     // If the file size is <= 0 then the file must be empty
     if(file.size() <= 0)
@@ -112,13 +114,14 @@ void Config::init()
         if(!strcmp(key.c_str(), "MAN")
                 || !strcmp(key.c_str(), "man"))
         {
-            manpath = value;
+            man_path = value;
         }
         if(!strcmp(key.c_str(), "DOC")
                 || !strcmp(key.c_str(), "doc"))
         {
-            docpath = value;
+            doc_path = value;
         }
+
 
         
     }

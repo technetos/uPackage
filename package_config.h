@@ -12,18 +12,6 @@ class Package_Config
         // The version of the package
         std::string version;
 
-        // The things to be run before install
-        std::string preinstall;
-
-        // This string is for storing the dot_conf data
-        std::string dot_conf_data;
-
-        // This string is for storing the destination of the dot_conf file
-        std::string dot_conf_dest;
-
-        // The things to be run after install
-        std::string postinstall;
-
         // The patches to be applied
         std::vector<std::string> patches;
 
@@ -53,26 +41,6 @@ class Package_Config
         std::string get_version() const
         {
             return version;
-        }
-
-        std::string get_preinstall() const
-        {
-            return preinstall;
-        }
-
-        std::string get_dot_conf_data() const
-        {
-            return dot_conf_data;
-        }
-
-        std::string get_dot_conf_dest() const
-        {
-            return dot_conf_dest;
-        }
-
-        std::string get_post_install() const
-        {
-            return postinstall;
         }
 
         std::vector<std::string> get_patches()
@@ -113,26 +81,6 @@ class Package_Config
         void set_version(const std::string s)
         {
             version = s;
-        }
-
-        void set_preinstall(const std::string s)
-        {
-            preinstall = s;
-        }
-
-        void set_dot_conf_data(const std::string s)
-        {
-            dot_conf_data = s;
-        }
-
-        void set_dot_conf_dest(const std::string s)
-        {
-            dot_conf_dest = s;
-        }
-
-        void set_postinstall(const std::string s)
-        {
-            postinstall = s;
         }
 
         void set_patches(const std::vector<std::string> vs)
