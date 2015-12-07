@@ -1,0 +1,6 @@
+name:acpi
+version:1.7
+archive_name:acpi-1.7.tar.gz
+source:acpi-1.7
+configure:--libdir=/usr/lib64 --sysconfdir=/etc \
+--localstatedir=/var --docdir=/usr/doc/acpi-1.7

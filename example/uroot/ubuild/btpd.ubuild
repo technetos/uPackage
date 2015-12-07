@@ -1,0 +1,5 @@
+name:btpd
+version:0.16
+archive_name:btpd-0.16.tar.gz
+source:btpd-0.16
+configure:--docdir=/usr/doc/btpd-0.16
