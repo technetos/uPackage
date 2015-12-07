@@ -25,6 +25,9 @@ __*uPackage solves these problems and more*__
 
 >   uPackage defines the following directories underneath a main root directory:
 
+>   The man root directory path is defined as /opt/upackage by default.  The
+environment variable UPACKAGE_ROOT is used to change where the root path is defined.
+
 #####ubuild/
 >   This directory is for the ubuild files that dictate how a package should
 be compiled.  
@@ -38,8 +41,8 @@ be built.
 path of every file installed by a package.  Each package has one tracking file
 and the filename is the name of the package + the version.
 
-#####patches/
->  This directory is where we put the patches for a package.  
+#####/tmp/uPackage-build/
+>   This is where the source is compiled and the compiled package is placed.  
 
 #Algorithm
 >   uPackage is broken up into multiple C++ classes.  Each class uses its own
