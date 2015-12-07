@@ -53,11 +53,6 @@ bool run(Package_Config package)
                         + " " \
                         + "--mandir=" + Config::get_man_path() \
                         + " " \
-                        + "--docdir=" + Config::get_doc_path() + "/" \
-                        + package.get_name() \
-                        + "-" \
-                        + package.get_version() \
-                        + " " \
                         + "--build=" + Config::get_arch() + "-slackware-linux" \
                         + " " \
                         + package.get_configure()).c_str()) != 0)
@@ -71,11 +66,6 @@ bool run(Package_Config package)
         if(system(("./configure --prefix=" + Config::get_prefix() \
                         + " " \
                         + "--mandir=" + Config::get_man_path() \
-                        + " " \
-                        + "--docdir=" + Config::get_doc_path() + "/" \
-                        + package.get_name() \
-                        + "-" \
-                        + package.get_version() \
                         + " " \
                         + "--build=" + Config::get_arch() + "-slackware-linux").c_str()) != 0)
         {
